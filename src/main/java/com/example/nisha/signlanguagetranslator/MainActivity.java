@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the activity is first created. */
  private Button button;
  private EditText editText;
- ImageView imageView;
+ Button imageView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,13 +105,14 @@ public class MainActivity extends AppCompatActivity {
                for(int i=0;i<Rohit.length();i++){
 
                    HashMap<String, String> hm = new HashMap<String,String>();
-                   hm.put("txt", "Country : " + countries.get( i ));
-                   hm.put("cur","Currency : " + currency.get( i ));
+                   hm.put("txt", "Sign for " + countries.get( i ).toUpperCase());
+                   hm.put("cur","Sign for " + currency.get( i ).toLowerCase());
                    hm.put("flag", Integer.toString(flags.get( i )));
                    aList.add(hm);
                }
 
                // Keys used in Hashmap
+
                String[] from = { "flag","txt","cur" };
 
                // Ids of views in listview_layout
